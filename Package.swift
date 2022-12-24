@@ -19,6 +19,9 @@ let package = Package(
             name: "IceCream",
             dependencies: [
                 .product(name: "RealmSwift", package: "realm-cocoa"),
-                .product(name: "Realm", package: "realm-cocoa")])
+                .product(name: "Realm", package: "realm-cocoa")],
+            path: "IceCream",
+            sources: ["Classes"])
     ]
 )
+  
