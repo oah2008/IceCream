@@ -127,7 +127,7 @@ extension DatabaseManager {
             case .chunk:
                 /// CloudKit says maximum number of items in a single request is 400.
                 /// So I think 300 should be fine by them.
-                let chunkedRecords = recordsToStore.chunkItUp(by: 300)
+                let chunkedRecords = recordsToStore.chunkItUp(by: 100)
                 for chunk in chunkedRecords {
                     self.syncRecordsToCloudKit(recordsToStore: chunk, recordIDsToDelete: recordIDsToDelete, completion: completion)
                 }
